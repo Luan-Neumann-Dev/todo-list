@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+@mixin generateFont($element) {
+  @if ($element == 'task-input-field') {
+    font: {
+      family: "Cairo", sans-serif;
+      optical-sizing: auto;
+      weight: 400;
+      style: normal;
+      variation-settings: "slnt" 0;
+    }
+  } @else {
+    @error "the specified element ('#{$element}') does not exist";
+  }
+}
