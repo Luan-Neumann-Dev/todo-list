@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '../generate-font' as generate-font;
+@use '../colors' as colors;
+
+.task-input-field {
+  outline: none;
+  box-sizing: border-box;
+  width: 448px;
+  height: 66px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgb(244 230 240);
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  @include generate-font.generateFont('task-input-field');
+  color: map.get(colors.$task-input-field, 'solid-text');
+
+  &::placeholder {
+    color: map.get(colors.$task-input-field, 'placeholder');
+  }
+}
